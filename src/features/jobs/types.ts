@@ -1,8 +1,9 @@
-export type Job = {
+export type JobLevel = "junior" | "mid" | "senior";
+
+export interface Job {
   id: number;
   title: string;
-  company?: string;
-  location?: string;
-  level?: "junior" | "mid" | "senior";
-  tags?: string[];
-};
+  company: string;
+  location: string;
+  level: JobLevel;
+}
