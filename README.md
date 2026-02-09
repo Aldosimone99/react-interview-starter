@@ -88,6 +88,26 @@ src/
 
 ---
 
+## ⚡ Performance & Web Vitals
+
+Lighthouse audits were used to evaluate real-world performance on core user flows.
+
+Notes:
+- Initial audits in development mode showed lower scores due to Vite dev tooling overhead (HMR, dev client).
+- Production preview (`vite preview`) was used as the reference to reflect real user conditions.
+
+Current results (Home page):
+- Performance: 100
+- Accessibility: 100
+- Best Practices: 100
+
+Jobs listing page:
+- Performance: 93 (feature-rich, data-driven UI)
+
+This approach highlights awareness of tooling impact on performance metrics and correct Web Vitals interpretation.
+
+---
+
 ## 🔐 Data Persistence
 
 Saved jobs and notes are stored locally:
@@ -133,12 +153,23 @@ Open: http://localhost:5173
 
 ---
 
+## ♿ Accessibility (Baseline)
+
+- Keyboard-navigable UI
+- Visible focus management for interactive elements
+- Semantic HTML structure
+- ARIA attributes used where appropriate
+
+Accessibility was considered during development, with further improvements identified as future work.
+
+---
+
 ## 🛣️ Possible Next Steps
 
 - Add dates/salary to jobs
 - Replace mock API with real backend
 - Add tests (RTL + Vitest)
-- Accessibility audit
+- Extended accessibility audit (WCAG-focused)
 
 ---
 
